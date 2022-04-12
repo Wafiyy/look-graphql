@@ -5,7 +5,7 @@ import {
 
 import { schema } from './schema.js'
 import { resolvers } from './reslover.js'
-
+const PORT = process.env.PORT|| 5000
 const server = new ApolloServer({
     typeDefs: schema,
     resolvers,
@@ -14,6 +14,6 @@ const server = new ApolloServer({
     ]
 })
 
-server.listen().then(({ url }) => {
+server.listen(PORT).then(({ url }) => {
     console.log(`🚀  Server ready at ${url}`)
 })
