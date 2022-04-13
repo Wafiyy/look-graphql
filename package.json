@@ -1,17 +1,19 @@
 {
-  "name": "look-graphql",
+  "name": "dars-44",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "nodemon server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon -e * src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^3.6.7"
+    "@graphql-tools/schema": "^8.3.8",
+    "apollo-server": "^3.6.7",
+    "graphql": "^16.3.0"
   }
 }
