@@ -11,14 +11,14 @@ export default {
 
             username = username.trim()
             contact = contact.trim()
-            if(!username || username > 30 || username < 3){
+            if(!username || username.length > 30 || username.length < 3){
                 return {
                     status: 400,
                     message: "Invalid username!",
                     data: null
                 }
             }
-            if((/^998[389][012345789][0-9]{7}$/).test(contact)){
+            if(!(/^998[389][012345789][0-9]{7}$/.test(contact))){
                 return {
                     status: 400,
                     message: "Invalid contact!",
@@ -42,15 +42,54 @@ export default {
         },
 
         changeUser: (_,{userId, username, contact}, {read, write} ) => {
+            const users = read('users')
+
+            username = username?.trim()
+            contact = contact?.trim()
+
+            if(username && ( username?.length > 30 || username?.length < 3)){
+                return {
+                    status: 400,
+                    message: "Invalid username!",
+                    data: null
+                }
+            }
+
+            if(contact && !(/^998[389][012345789][0-9]{7}$/.test(contact))){
+                return {
+                    status: 400,
+                    message: "Invalid contact!",
+                    data: null
+                }
+            }
+            const user = users.find(user => +user.userId === +userId)
+
+            if(!user){
+                return {
+                    status: 400,
+                    message: "Invalid userId"
+                }
+            }
+
+            user.username = username ? username : user.username
+            user.contact  = contact  ? contact  : user.contact
+
+            write("users",users)
+
+            return {
+                status: 200,
+                message: "Ok",
+                data: user
+            }
 
         },
 
         deleteUser(_, {userId},{read,write}){
             const users = read('users')
 
-            const index = users.findIndex(user => user.userId === userId)
+            const index = users.findIndex(user => +user.userId === +userId)
             console.log(index)
-            if(index==-1){
+            if(index===-1){
                 return {
                     status: 400,
                     message: "User not found",
