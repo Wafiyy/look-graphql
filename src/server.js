@@ -6,6 +6,7 @@ import model from './utils/model.js'
 const server = new ApolloServer({
     context: ({ req, res }) => model,
     schema,
+    introspection: true,
     plugins: [
         ApolloServerPluginLandingPageGraphQLPlayground()
     ]

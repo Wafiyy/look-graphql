@@ -88,7 +88,7 @@ export default {
             const users = read('users')
 
             const index = users.findIndex(user => +user.userId === +userId)
-            console.log(index)
+
             if(index===-1){
                 return {
                     status: 400,
@@ -97,6 +97,10 @@ export default {
                 }
             }
             const user = users.splice(index,1)
+            let orders = read('orders')
+
+            orders = orders.filter(order => order.userId !== userId)
+            write("orders",orders)
             write("users",users)
             return {
                 status: 202,
