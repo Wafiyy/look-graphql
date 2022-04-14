@@ -7,6 +7,17 @@ type Mutation{
         foodId:ID!
         count:Int!
     ): OrderResponse!
+
+    changeOrder(
+        orderId: ID!
+        userId: ID!
+        foodId: ID!
+        count: Int!
+    ): OrderResponse!
+
+    deleteOrder(
+        orderId: ID!
+    ): OrderResponse!
 }
 
 type Order {
@@ -31,5 +42,5 @@ type Food {
 type OrderResponse {
     status: Int!
     message: String!
-    data: Order!
+    data: Order
 }

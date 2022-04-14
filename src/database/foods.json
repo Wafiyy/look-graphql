@@ -1,37 +1,42 @@
 [
     {
-      "foodId": "1",
-      "foodName": "Cola",
-      "foodImg": "./img/cola.jpeg"
+        "foodId": "1",
+        "foodName": "Cola",
+        "foodImg": "./img/cola.jpeg"
     },
     {
-      "foodId": "2",
-      "foodName": "Spinner",
-      "foodImg": "./img/spinner.jpeg"
+        "foodId": "2",
+        "foodName": "Spinner",
+        "foodImg": "./img/spinner.jpeg"
     },
     {
-      "foodId": "3",
-      "foodName": "Chiken Wings",
-      "foodImg": "./img/chicken_wings.jpeg"
+        "foodId": "3",
+        "foodName": "Chiken Wings",
+        "foodImg": "./img/chicken_wings.jpeg"
     },
     {
-      "foodId": "4",
-      "foodName": "Burger Cheese",
-      "foodImg": "./img/burger_cheese.jpeg"
+        "foodId": "4",
+        "foodName": "Burger Cheese",
+        "foodImg": "./img/burger_cheese.jpeg"
     },
     {
-      "foodId": "5",
-      "foodName": "Chicken Togora",
-      "foodImg": "./img/chicken_togora.jpeg"
+        "foodId": "5",
+        "foodName": "Chicken Togora",
+        "foodImg": "./img/chicken_togora.jpeg"
     },
     {
-      "foodId": "6",
-      "foodName": "Combo",
-      "foodImg": "./img/combo.jpeg"
+        "foodId": "6",
+        "foodName": "Combo",
+        "foodImg": "./img/combo.jpeg"
     },
     {
-      "foodId": "7",
-      "foodName": "Fanta",
-      "foodImg": "./img/fanta.jpeg"
+        "foodId": "7",
+        "foodName": "Fanta",
+        "foodImg": "./img/fanta.jpeg"
+    },
+    {
+        "foodId": 8,
+        "foodName": "pepsi",
+        "foodImg": "https://www.luluhypermarket.com/medias/162384-01.jpg-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w0ODYyNjd8aW1hZ2UvanBlZ3xoY2MvaDg5Lzk3NzU1NTc3NzEyOTQvMTYyMzg0LTAxLmpwZ18xMjAwV3gxMjAwSHxkMzdhNzNkZGQzMDMzMDAzZjNkYzdjOWQ0ZGRjOWQ1NzQwMTcwYmEzZTA4YTE4MzhhODU2NjhhNWFkY2JiOGZj"
     }
-  ]
+]
